@@ -1,6 +1,6 @@
 name: Go
 
-on: [push]
+on: [ push ]
 
 jobs:
 
@@ -19,6 +19,9 @@ jobs:
         with:
           go-version: 1.14
 
+      - name: start taosd
+        run: nohup taosd &
+
       - name: Install build-essential
         run: apt-get update && apt-get install -y build-essential curl
 
@@ -27,6 +30,3 @@ jobs:
 
       - name: Test
         run: go test -v ./...
-
-      - name : CatLog
-        run: echo $<(/var/log/taos/taoslog0.0)
