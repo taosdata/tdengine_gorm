@@ -27,6 +27,3 @@ jobs:
 
       - name: Test
         run: go test -v ./...
-
-      - name: ShowLog
-        run: cat /var/log/taos/taoslog0.0

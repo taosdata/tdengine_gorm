@@ -14,7 +14,7 @@ import (
 )
 
 func TestDialect(t *testing.T) {
-	dsn := "root:taosdata@/tcp(127.0.0.1:6030)/"
+	dsn := "root:taosdata@/cfg/"
 
 	rows := []struct {
 		description  string
@@ -117,7 +117,7 @@ func TestDialect(t *testing.T) {
 
 func TestClause(t *testing.T) {
 	//create db
-	dsnWithoutDB := "root:taosdata@/tcp(127.0.0.1:6030)/?loc=Local"
+	dsnWithoutDB := "root:taosdata@/cfg/?loc=Local"
 	nativeDB, err := sql.Open(DriverName, dsnWithoutDB)
 	if err != nil {
 		t.Errorf("connect db error:%v", err)
@@ -129,7 +129,7 @@ func TestClause(t *testing.T) {
 		return
 	}
 	nativeDB.Close()
-	dsn := "root:taosdata@/tcp(127.0.0.1:6030)/gorm_test?loc=Local"
+	dsn := "root:taosdata@/cfg/gorm_test?loc=Local"
 	db, err := gorm.Open(Open(dsn))
 	if err != nil {
 		t.Errorf("unexpected error:%v", err)
