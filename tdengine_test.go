@@ -155,7 +155,8 @@ func TestClause(t *testing.T) {
 		})
 		err = db.Table("stb_1").Clauses(create.NewCreateTableClause([]*create.Table{stable})).Create(map[string]interface{}{}).Error
 		if err != nil {
-			t.Fatalf("create sTable error %v", err)
+			t.Errorf("create sTable error %v", err)
+			return
 		}
 	})
 	t.Run(fmt.Sprintf("create table using sTable"), func(t *testing.T) {
@@ -165,7 +166,8 @@ func TestClause(t *testing.T) {
 		})
 		err = db.Table("tb_1").Clauses(create.NewCreateTableClause([]*create.Table{table})).Create(map[string]interface{}{}).Error
 		if err != nil {
-			t.Fatalf("create table error %v", err)
+			t.Errorf("create table error %v", err)
+			return
 		}
 	})
 	now := time.Now()
@@ -177,7 +179,8 @@ func TestClause(t *testing.T) {
 			"value": randValue,
 		}).Error
 		if err != nil {
-			t.Fatalf("insert data error %v", err)
+			t.Errorf("insert data error %v", err)
+			return
 		}
 	})
 	t1 := now.Add(time.Second)
@@ -191,7 +194,8 @@ func TestClause(t *testing.T) {
 			"value": tRandValue,
 		}).Error
 		if err != nil {
-			t.Fatalf("create table when insert data error %v", err)
+			t.Errorf("create table when insert data error %v", err)
+			return
 		}
 	})
 	type Data struct {
@@ -259,7 +263,8 @@ func TestClause(t *testing.T) {
 			},
 		}).Error
 		if err != nil {
-			t.Fatalf("create table when insert data error %v", err)
+			t.Errorf("create table when insert data error %v", err)
+			return
 		}
 	})
 	t.Run(fmt.Sprintf("aggregate query: avg"), func(t *testing.T) {
