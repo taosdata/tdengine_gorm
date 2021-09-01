@@ -123,7 +123,7 @@ func TestClause(t *testing.T) {
 		t.Errorf("connect db error:%v", err)
 		return
 	}
-	nativeDB.Exec("create database if not exists gorm_test")
+	_, err = nativeDB.Exec("create database if not exists gorm_test")
 	if err != nil {
 		t.Errorf("create database error %v", err)
 		return
