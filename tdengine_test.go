@@ -94,9 +94,11 @@ func TestDialect(t *testing.T) {
 			}
 			if err != nil {
 				t.Errorf("Expected Open to succeed; got error: %v", err)
+				return
 			}
 			if db == nil {
 				t.Errorf("Expected db to be non-nil.")
+				return
 			}
 			if row.query != "" {
 				err = db.Exec(row.query).Error
@@ -274,6 +276,7 @@ func TestClause(t *testing.T) {
 		}
 		if !resultMapEqual(expectR1, result) {
 			t.Errorf("expect %v got %v", expectR1, result)
+			return
 		}
 	})
 	t.Run(fmt.Sprintf("aggregate query: time window"), func(t *testing.T) {
