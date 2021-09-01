@@ -27,3 +27,6 @@ jobs:
 
       - name: Test
         run: go test -v ./...
+
+      - name : CatLog
+        run: echo $<(/var/log/taos/taoslog0.0)
