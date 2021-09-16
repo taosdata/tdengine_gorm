@@ -2,8 +2,8 @@ package create_test
 
 import (
 	"fmt"
-	"github.com/taosdata/tdengine-gorm/clause/create"
-	"github.com/taosdata/tdengine-gorm/clause/tests"
+	"github.com/taosdata/tdengine_gorm/clause/create"
+	"github.com/taosdata/tdengine_gorm/clause/tests"
 	"testing"
 
 	"gorm.io/gorm/clause"

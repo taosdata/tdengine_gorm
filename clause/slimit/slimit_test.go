@@ -2,8 +2,8 @@ package slimit_test
 
 import (
 	"fmt"
-	"github.com/taosdata/tdengine-gorm/clause/slimit"
-	"github.com/taosdata/tdengine-gorm/clause/tests"
+	"github.com/taosdata/tdengine_gorm/clause/slimit"
+	"github.com/taosdata/tdengine_gorm/clause/tests"
 	"testing"
 
 	"gorm.io/gorm/clause"

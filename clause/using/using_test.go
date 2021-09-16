@@ -2,11 +2,10 @@ package using_test
 
 import (
 	"fmt"
-	"github.com/taosdata/tdengine-gorm/clause/tests"
-	"github.com/taosdata/tdengine-gorm/clause/using"
-	"testing"
-
+	"github.com/taosdata/tdengine_gorm/clause/tests"
+	"github.com/taosdata/tdengine_gorm/clause/using"
 	"gorm.io/gorm/clause"
+	"testing"
 )
 
 func TestSetValue(t *testing.T) {

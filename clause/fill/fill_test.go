@@ -2,9 +2,9 @@ package fill_test
 
 import (
 	"fmt"
-	"github.com/taosdata/tdengine-gorm/clause/fill"
-	"github.com/taosdata/tdengine-gorm/clause/tests"
-	"github.com/taosdata/tdengine-gorm/clause/window"
+	"github.com/taosdata/tdengine_gorm/clause/fill"
+	"github.com/taosdata/tdengine_gorm/clause/tests"
+	"github.com/taosdata/tdengine_gorm/clause/window"
 	"testing"
 
 	"gorm.io/gorm/clause"

@@ -1,4 +1,4 @@
-package taosgorm
+package tdengine_gorm
 
 import (
 	"database/sql"

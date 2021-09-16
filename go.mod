@@ -1,4 +1,4 @@
-module github.com/taosdata/tdengine-gorm
+module github.com/taosdata/tdengine_gorm
 
 go 1.13
 
